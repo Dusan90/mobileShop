@@ -1,22 +1,627 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Wendy+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+/* font-family: 'Bangers', cursive; */
+/* font-family: 'Wendy One', sans-serif; */
+/* font-family: 'Racing Sans One', cursive; */
+/* font-family: 'Kaushan Script', cursive; */
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home{
+  background: url('https://cnet1.cbsistatic.com/img/ovXwiw2lsqsmUhDjNlH4F032jvU=/1200x675/2019/02/07/1d30d581-7dc2-4d50-a40e-f9a11ab50359/razer-asus-xiaomi-nubia-gaming-phones-3.jpg')center/cover no-repeat;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+.home h1{
+  color: white;
+  font-family: 'Bangers', cursive;
+  font-size: 6rem;
+  letter-spacing: 6px;
+  text-shadow: 4px 4px 4px purple;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.home strong{
+  color: blanchedalmond;
 }
 
-.App-header {
-  background-color: #282c34;
+.nav{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+}
+
+.link{
+  margin: 0 auto;
+}
+
+.nav img{
+  width: 300px;
+  height: 300px;
+  transition: all 1s ease-in-out;
+}
+
+.nav img:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.mainShopDiv{
+  width: 100%;
   min-height: 100vh;
+}
+
+.navic{
+  height: 45px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(94, 82, 82, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.mainBasket{
+  position: relative;
+}
+
+.numItems{
+  position: absolute;
+  z-index: 20;
+  color: black;
+  top: 50%;
+  left: 60%;
+  background: pink;
+  padding: 1px 3px;
+  border-radius: 5px;
+} 
+
+.house, .basket{
+  color: burlywood;
+  font-size: 2rem;
+  margin: 0 30px;
+  transition: all 1s ease-in-out;
+}
+
+.house:hover, .basket:hover{
+  cursor: pointer;
+  box-shadow: 2px 2px 7px black;
+  border: 1px solid white;
+  color: white
+}
+.head{
+  background: url("https://www.techadvisor.co.uk/cmsdata/slideshow/3675843/best-camera-phones-2019_thumb800.jpg")center/cover no-repeat;
+  text-align: center;
+  margin: 50px auto;
+  display: flex;
+  width: 90%;
+  height: 60vh;
+  box-shadow: 2px 2px 3px black;
+  position: relative;
+}
+
+.head h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  color: white;
+  font-size: 3rem;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 4px;
+  text-shadow: 5px 5px 5px black;
+}
+
+.Review{
+  color: purple;
+  font-family: 'Wendy One', sans-serif;
+  text-shadow: 5px 5px 3px black;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 auto 40px auto;
+}
+
+.mainReview{
+  display: flex;
+}
+
+.companies{
+  flex: 1
+}
+
+.companie{
+  padding: 20px;
+  text-align: center;
+}
+
+.companie h1{
+  color: burlywood;
+  font-family: 'Wendy One', sans-serif;
+  text-shadow: 5px 5px 3px black;
+  margin-bottom: 20px;
+}
+
+.companie img{
+  width: 150px;
+  height: 100px;
+  margin: 20px auto;
+}
+
+.companie img:hover{
+  cursor: pointer;
+}
+
+.phones{
+  flex: 5;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
+  grid-gap: 50px;
+  padding: 10px;
+}
+
+.phone{
+  height: 280px;
+  width: 280px;
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+.phone h3{
+  color: purple;
+  font-family: 'Wendy One', sans-serif;
+  text-shadow: 2px 2px 5px black;
+  font-size: 1.5rem;
+}
+
+.phone button{
+  color: white;
+  font-family: 'Wendy One', sans-serif;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 20px;
+  text-shadow: 2px 2px 2px black;
+  box-shadow: 5px 5px 5px black;
+  transition: all 1s ease-in-out;
+}
+
+.phone button:hover{
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  text-shadow: 2px 2px 2px white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.error{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px black;
+}
+
+.mainDivModel{
+  background: black;
+}
+
+.mainDivModel h1{
+  color: white;
+  text-align: center;
+  padding: 50px;
+  font-family: 'Wendy One', sans-serif;
+  text-shadow: 4px 4px 15px peachpuff;
+}
+
+.mainInfoModel{
+  display: flex;
+  flex-direction: row;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Wendy One', sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 4px 4px 15px peachpuff;
+  letter-spacing: 1px;
+}
+
+.mainImgModel{
+  flex: 1;
+  text-align: center;
+}
+
+.mainImgModel img{
+  width: 100%;
+}
+
+.info{
+  flex: 1;
+  color: white;
+}
+
+.info p {
+  margin: 20px;
+}
+
+.p2{
+  text-align: center;
+  margin: 30px;
+  padding: 30px; 
+  font-family: 'Racing Sans One', cursive;
+  color: purple;
+  font-size: 1.5rem;
+}
+
+.price{
+  text-align: center;
+  margin: 30px;
+  padding: 30px;
+}
+.price strong{
+  color: red;
+  padding: 0 10px;
+}
+
+.price button, .sideBasket button{
+  padding: 10px;
+  border: 2px solid purple;
+  background: transparent;
+  color: purple;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+  text-shadow: 2px 2px 2px black;
+  transition: all 1s ease-in-out;
+  outline: none;
+}
+
+.pr{
+  margin-bottom: 20px;
+}
+
+.price button:hover, .sideBasket button:hover{
+  background: rgba(255, 0, 221, 0.4);
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.yt{
+  width: 100%;
+}
+
+.yt iframe{
+  width: 100%;
+  height: 100vh;
+}
+
+
+.sideBasket{
+  width: 400px;
+  max-height: 90vh;
+  overflow: auto;
+  background: rgba(94, 82, 82, 0.6);
+  position: fixed;
+  z-index: 100;
+  top: 45px;
+  right: 0;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 2px 2px 3px black;
+  border-bottom-left-radius: 10px;
+  transition: all 1s ease-in-out;
+  display: none;
+}
+
+.sideBasket h2{
+  color: purple;
+  font-size: 2rem;
+  margin: 20px auto;
+}
+
+.sideBasket p{
+  color: pink;
+  font-size: 1.5rem;
+  margin: 20px auto;
+}
+
+.mainAboutDiv h1{
+  background: url('https://www.energysavingtrust.org.uk/sites/default/files/blog/images/GettyImages-1094812112.jpg')center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3rem;
+  text-shadow: 3px 3px 4px black;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.in{
+  margin: 100px auto;
+  padding: 0 20%;
+}
+
+.in p{
+  font-family: 'Kaushan Script', cursive;
+  color: pink;
+  text-shadow: 2px 2px 4px black;
+}
+
+.mainAboutDiv span{
+  color: darkred;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+.offer{
+  background: rgb(250, 242, 228);
+  margin: 30px 0 0 0;
+  padding: 10px;
+}
+
+.offer h2, .offer h5{
+  text-align: center;
+}
+
+.offer h2{
+  color: darkred;
+  font-size: 3rem;
+}
+
+.offer h5{
+  font-family: 'Kaushan Script', cursive;
+  color: darkgray;
+  text-shadow: 1px 1px 2px black;
+}
+
+.sexyLine{
+  height: 2px;
+  background: linear-gradient(to right, red, blue, white);
+  margin: 30px auto;
+  width: 50px;
+}
+
+.mainAboutDiv img{
+  width: 100%;
+}
+
+.mainContactDiv {
+  background: linear-gradient(to bottom left, black, purple);
+  padding: 45px 30px 30px 30px ;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.testDiv{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px black;
+}
+
+.social{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.social h1{
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-family: 'Kaushan Script', cursive;
+  margin: 50px auto;
+  font-size: 3rem;
+}
+
+.social p, .social a, .map p{
+  color: gray;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 1px black;
+  margin: 20px auto;
+}
+
+.icons{
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  margin: 20px solid;
+}
+
+.icnf, .icni, .icnt{
+  margin: 20px auto;
+  transition: all 1s ease-in-out;
+}
+
+.icnf:hover, .icni:hover, .icnt:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.icnf{
+  color: rgb(73, 73, 248);
+}
+
+.icnt{
+  color: rgb(0, 191, 255);
+}
+
+.icni{
+  color: pink;
+}
+
+.map{
+  width: 100%
+  
+}
+
+.map iframe{
+  width: 100%;
+  border-radius: 40px;
+  opacity: 0.4;
+  transition: all 1s ease-in-out;
+}
+
+.map iframe:hover{
+  opacity: 1;
+}
+
+.stufDiv{
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  user-select: none;
+}
+
+.stuf img{
+  flex: 1;
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 2px black;
+  margin: 0px 20px;
+  
+}
+
+
+
+.infoStufDiv{
+  flex: 4;
+}
+
+.stuf p{
+  margin: 0;
+  align-items: center;
+}
+
+.priceTag{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color:  rgb(158, 158, 158);
+}
+
+.SingUpDiv, .SingUpDiv2{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 20;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 30px;
+}
+
+.SingUpDiv h1, .SingUpDiv2 h1{
+  color: gray;
+  text-shadow: 2px 2px 2px black;
+  margin: 20px 0;
+}
+
+.SingUpDiv form{
+  display: flex;
+  flex-direction: column;
+}
+
+.SingUpDiv input{
+  width: 40vw;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background: transparent;
+  margin: 10px 0;
+  color: white;
+  outline: none;
+}
+
+.SingUpDiv button{
+  margin: 20px 5px;
+  text-align: center;
+  padding: 5px 10px;
+  border: 2px solid purple;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px purple;
+  transition: all 0.5s ease-in-out;
+  outline: none;
+}
+
+.SingUpDiv button:hover{
+  background: purple;
+  text-shadow: 2px 2px 2px black;
+  cursor: pointer;
+}
+
+.showAlert{
+  background: rgba(255, 0, 0, 0.6);
+  padding: 10px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media (max-width: 800px){
+  .head{
+    width: 100%;
+  }
+  .companie{
+    padding: 0;
+  }
+  .companie img{
+    height: 100px;
+  }
+  .in{
+    padding: 50px
+  }
+  .mainInfoModel{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px){
+  .companies{
+    display: none;
+  }
+  .phones{
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  }
+  .naslov h1{
+    display: flex;
+    flex-direction: column;
+  }
+  .sideBasket{
+    width: 100%;
+   background: rgba(94, 82, 82, 0.9);
+
+  }
 }
